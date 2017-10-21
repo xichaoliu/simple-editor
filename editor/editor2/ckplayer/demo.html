@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="ckDiv" style="width:200px;height:200px;margin:0 50px;"></div>
+</body>
+</html>
+<script src="./ckplayer.js"></script>
+<script>
+    var str = "http://119.60.8.230:10088/EasyTrans/Data/cc153d43-17d5-4de7-8ec3-318ed65724f6/video.m3u8";
+//    var cl =http://localhost:63342/demo/editor/editor2/ckplayer/demo.html
+//    var dom = document.getElementById("ckDiv");
+    playVideo("ckDiv",str);
+    function playVideo(div,url){
+        var flashvars = {
+            f:'http://localhost:63342/demo/editor/editor2/ckplayer/m3u8.swf',
+            a:url,
+            s:4,
+            c:0,
+            loaded:'loadedHandler'
+        };
+        var params = {bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+        var video = [url];
+        var w = Math.floor(window.screen.width * 0.35);
+        var h = Math.floor(w * 3 / 5);
+        CKobject.embed("http://localhost:63342/demo/editor/editor2/ckplayer/ckplayer.swf",div,'ckplayer_a1',
+            w, h, false, flashvars, video, params);
+    }
+</script>

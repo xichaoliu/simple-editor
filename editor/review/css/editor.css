@@ -1,0 +1,192 @@
+html,body,div,textarea,video,img,span{
+			margin:0;
+			padding:0;
+		}
+#container{
+	width:980px;
+	margin:50px auto;
+	position:relative;
+}	
+#container:after{
+	content:"";
+	clear:both;
+	height:0;
+	display: block;
+	overflow: hidden;
+}
+#content{
+	width:680px;
+	padding:10px;
+	min-height: 350px;
+	padding-bottom: 100px;
+	border:2px solid #f1f1f1;
+	float:left;
+}
+#sidebar{
+	width:240px;
+	padding-top:25px;
+	border:2px solid #f1f1f1;
+	float:right;
+}
+div.insert{
+	width:240px;
+	height:28px;
+	margin-bottom: 25px;
+	text-align: center;
+	line-height: 28px;
+	color:#000;
+	position:relative;
+	cursor:pointer;
+}
+div.insert:hover{
+	color:#0000FF;
+}
+div.insert div.upUp{
+	width:345px;
+	height:210px;
+	padding:40px 25px;
+	text-align: center;
+	background:#fff;
+	position:absolute;
+	top:0;
+	left:-415px;
+	z-index:1000;
+	display:none;
+	border:1px solid #666;
+}
+
+div.upUp label{
+	display: block;
+	width:200px;
+	height:60px;
+	border:none;
+	text-align: center;
+	line-height: 60px;
+	color:#fff;
+	border-radius:60px;
+	background:#0055AA;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-100px;
+	margin-top:-30px;
+	cursor:pointer;
+	
+}
+
+
+div.button{
+	position:absolute;
+	width:200px;
+	height:30px;
+	top:50%;
+	left:50%;
+	margin-left:-100px;
+	margin-top:60px;
+}
+
+
+div.para{
+	font-size:14px;
+	color:#000;
+}
+div.title{
+	font-size: 16px;
+	color:#000;
+	font-weight: bold;
+}
+#content>div.IV{
+	width:680px;
+	overflow:hidden;
+	position:relative;
+	
+}
+#content>div.IV>img{
+	width:680px;
+	height:544px;
+	cursor:pointer;
+}
+
+#content>div.IV>video{
+	display:block;
+	width:680px;
+	height:544px;
+}
+
+
+#submit{
+	width: 65px;
+    height: 38px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 38px;
+    background: #009688;
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    bottom: -65px;
+    left: 50%;
+    margin-left: -95px;
+    cursor: pointer;
+}
+/*外框*/
+div.textarea{
+	width:650px;
+	padding-top:15px;
+	padding-right:15px;
+	border-radius:9px;
+	overflow:hidden;
+	position:relative;
+}
+/*取消按钮*/
+span.cancel{
+	display:inline-block;
+	width:15px;
+	height:15px;
+	background:#F20505;
+	opacity:0.5;
+	color:#FFF;
+	font-size:12px;
+	text-align:center;
+	line-height: 15px;
+	position:absolute;
+	right:0px;
+	top:0px;
+	display:none;
+	cursor: pointer;
+	border-radius: 30px;
+	z-index: 1000;/*必须存在，否则会被video标签覆盖*/
+}
+/*可编辑div*/
+.editor{
+    width:650px; 
+    min-height: 20px; 
+    max-height: 600px;
+    padding-left:20px;
+    _height: 120px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 3px; 
+    outline: 0; 
+   /* border: 1px solid #a0b3d6; */
+  	border:none;
+    font-size: 12px; 
+    line-height: 24px;
+    padding: 2px;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-color: rgba(82, 168, 236, 0.8);
+	position:relative;
+}
+div.ct{
+	border:2px solid #FFF;
+}
+div.ct:hover{
+	border:2px solid #65a6c7;
+}
+div.selected{
+	border:2px solid #FF0000;
+}
+
+

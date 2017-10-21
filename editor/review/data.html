@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#content{
+			width:680px;
+			padding:10px;
+			min-height: 350px;
+			margin:50px auto;
+			border:2px solid #f1f1f1;
+		}
+	</style>
+	<body>
+		<div id="content">
+				<div class="editor para" contenteditable="true"></div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+
+reRender()
+function reRender(){
+	var str = "<text>a&插入文本&<br>&发&<br>&<br>&&nbsp;&nbsp;&大&</text><video thum='[1506052140141]'>d{1506052140141}</video><caption>b&插入标题对对对&<br>&&nbsp; 嗯，对的&</caption><picture>c1506052142532</picture><text>a&插入文本&<br>&发&<br>&</text>";
+	var patt2 = /(<text>|<caption>|<picture>|<video>|<\/text>|<\/picture>|<\/caption>|<\/video>|<video[^br]*?>)/g;
+	var arr = str.replace(patt2,",").replace(/,{2}/g,",").slice(1,-1).split(",");
+	var l = arr.length;
+	for(var i=0; i<l; i++){
+		var index = arr[i][0]
+		if(index =="a"){
+			var col = arr[i].split("&").slice(1,-1)
+//			console.log(col)
+//			renderTxt(arr[i])
+		}
+	}
+}
+
+////重绘文本
+//function renderTxt(text){
+//	
+//		var _con = $("<div></div>").addClass("textarea ct").appendTo("#content")
+//		var _div = $("<div></div>").addClass("editor para").html("插入文本").attr("contenteditable",true)
+//		$(_div).appendTo(_con)	
+//	
+//	$("<span></span>").addClass("cancel").html("X").appendTo(_con)
+//}
+</script>
